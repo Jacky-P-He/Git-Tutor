@@ -17,9 +17,19 @@ create git environment
 git init
 ```
 
-set the default branch to ***main*** (Because of an update of default branch from Master to main on Github)  
+Add remote Github, the repository created in the first step
 ```bash
-git config --global init.defaultBranch main
+git remote add origin https://github.com/...[This is your personal git HTML path]
+```
+
+get origin folder on GitHub, the README file
+```bash
+git pull origin main
+```
+
+set the master branch to ***main*** (Because of an update of default branch from Master to main on Github)  
+```bash
+git branch -m master main
 ```
 
 Add all files to local git
@@ -32,11 +42,6 @@ Add comments for records
 git commit -m "Initial Commit"
 ```
 
-Add remote Github, the repository created in the first step
 ```bash
-git remote add origin git@github.com:[This is your personal git SSH path]
-```
-
-```bash
-git push origin main
+git push --set-upstream origin main
 ```
